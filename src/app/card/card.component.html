@@ -15,4 +15,8 @@
       <button mat-button>DETTAGLI</button>
     </mat-card-actions>
   </mat-card>
+
+  
+<p-paginator (onPageChange)="onPageChange($event)" [first]="first" [rows]="rows" [totalRecords]="totalPages" [rowsPerPageOptions]="[10, 20, 30]"></p-paginator>
+
 </div>

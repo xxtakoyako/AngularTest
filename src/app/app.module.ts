@@ -9,6 +9,8 @@ import { MatCardModule } from '@angular/material/card';
 import {MatButtonModule} from '@angular/material/button';
 import {MatGridListModule} from '@angular/material/grid-list';
 import { SearchBarComponent } from './search-bar/search-bar.component';
+import {MatPaginatorModule} from '@angular/material/paginator';
+import { PaginatorModule } from 'primeng/paginator';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import { SearchBarComponent } from './search-bar/search-bar.component';
     HttpClientModule,
     MatCardModule,
     MatButtonModule,
-    MatGridListModule
+    MatGridListModule,
+    MatPaginatorModule,
+    PaginatorModule 
   ],
   providers: [],
   bootstrap: [AppComponent]
