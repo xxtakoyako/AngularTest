@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { RistorantiService } from './servizi/ristoranti.service';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,17 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'new-test';
+  ristorante:any;
+
+  constructor(private service:RistorantiService) {}
+  
+  ngOnInit() {
+      this.service.getRistoranti(0, 10)
+        .subscribe(response => {
+          this.ristorante = response;
+        });
+  }
+
+  
+	
 }
